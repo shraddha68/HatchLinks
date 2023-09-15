@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trader Dashboard</h1>
+    </header>
+    
+    <section class="deal-details">
+        <h2>Deal Details</h2>
+        <p>Product Name: Sample Product</p>
+        <p>Customer: John Doe</p>
+        <p>Price: $19.99</p>
+    </section>
+
+    <section class="order-processing">
+        <h2>Order Processing</h2>
+        <form action="/process-order" method="post">
+            <label for="order-status">Order Status:</label>
+            <select id="order-status" name="order-status">
+                <option value="processing">Processing</option>
+                <option value="shipped">Shipped</option>
+                <option value="completed">Completed</option>
+            </select>
+            <button type="submit">Update Order</button>
+        </form>
+    </section>
+    
+    <section class="user-interactions">
+        <h2>User Interactions</h2>
+        <button id="accept-deal">Accept Deal</button>
+        <button id="reject-deal">Reject Deal</button>
+    </section>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+    
+    <section class="user-address">
+        <h2>User Address</h2>
+        <form action="/update-address" method="post">
+            <label for="user-address">User Address:</label>
+            <textarea id="user-address" name="user-address" rows="4" cols="50" required></textarea>
+            <button type="submit">Save Address</button>
+        </form>
+    </section>
+
+    <!-- Other sections for deal details, order processing, etc. -->
+
+    <footer>
+        <p>&copy; 2023 Trader Inc.</p>
+    </footer>
+
+    <footer>
+        <p>&copy; 2023 Trader Inc.</p>
+    </footer>
+</body>
+</html>
