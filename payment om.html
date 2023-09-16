@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            background-image: url('background-image.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        
+        .payment-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .payment-method label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .payment-method input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .payment-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .payment-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-method">
+            <input type="radio" id="upi" name="payment" value="upi">
+            <label for="upi">UPI</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="cod" name="payment" value="cod">
+            <label for="cod">Cash on Delivery</label>
+        </div>
+        <button class="payment-button" onclick="processPayment()">Proceed to Payment</button>
+    </div>
+
+    <script>
+        function processPayment() {
+            const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked');
+
+            if (selectedPaymentMethod) {
+                const paymentMethod = selectedPaymentMethod.value;
+
+                
+                } else if (paymentMethod === "cod") {
+                    // Implement Cash on Delivery logic here
+                    alert("Your order will be delivered, and you can pay in cash.");
+                }
+            } else {
+                alert("Please select a payment method.");
+            }
+        }
+    </script>
+</body>
+</html>
